@@ -203,9 +203,9 @@ del() {
     done
 }
 
-[[ -d /bin/ejecutar ]] && {
-    [[ -e /bin/ejecutar/msg ]] || wget -q -O /bin/ejecutar/msg https://raw.githubusercontent.com/NetVPS/Generador-BOT/main/Otros/msg
-} || mkdir /bin/ejecutar
+[[ -d /bin/dksources ]] && {
+    [[ -e /bin/dksources/msg ]] || wget -q -O /bin/dksources/msg https://raw.githubusercontent.com/NetVPS/Generador-BOT/main/Otros/msg
+} || mkdir /bin/dksources
 cor[0]="\033[0m"
 cor[1]="\033[1;34m"
 cor[2]="\033[1;32m"
@@ -228,9 +228,9 @@ apt upgrade -y
 
 install_ini() {
     clear
-    msg -bar
-    echo -e "\033[92m 	  •  INSTALANDO PAQUETES ESENCIALES  • "
-    msg -bar
+#    msg -bar
+    echo -e "\n \033[92m 	  •  INSTALANDO PAQUETES ESENCIALES  • \n"
+ #   msg -bar
     ESTATUS=$(echo -e "\033[92mINSTALADO") &>/dev/null
     locale-gen en_US.UTF-8 >/dev/null 2>&1
     update-locale LANG=en_US.UTF-8 >/dev/null 2>&1
@@ -334,7 +334,7 @@ fun_filez() {
     fup="$HOME/update"
     echo "$1" >>$HOME/files.log
 
-    wget -O /bin/http-server.sh https://raw.githubusercontent.com/NetVPS/Generador-BOT/main/Bot/http-server.py  && chmod +x /bin/http-server.sh
+    wget -O /bin/http-server.sh https://raw.githubusercontent.com/${main}/http-server.py  && chmod +x /bin/http-server.sh
     [[ -e $1 ]] && mv -f ${fup}/$1 /etc/SCRIPT/$1
 }
 
@@ -361,7 +361,7 @@ ofus() {
 }
 
 DOWS() {
-    wget -O /root/lista https://raw.githubusercontent.com/NetVPS/Generador-BOT/main/Otros/lista
+    wget -O /root/lista https://raw.githubusercontent.com/${main}/lista
     wget --no-check-certificate -i $HOME/lista
 }
 
@@ -399,7 +399,7 @@ atualiza_fun() {
     done
     mkdir -p /etc/SCRIPT
     mv -f /root/update/* /etc/SCRIPT/
-    wget -q -O /usr/bin/gerar https://raw.githubusercontent.com/NetVPS/Generador-BOT/main/Menu-Bash/gerador.sh && chmod +rwx /usr/bin/gerar
+    wget -q -O /usr/bin/gerar https://raw.githubusercontent.com/${main}/gerador.sh && chmod +rwx /usr/bin/gerar
     cd $HOME
     msg -bar
     echo -e "\033[1;92m           DIGITE EL COMANDO: \033[1;33mgerar  "
@@ -409,7 +409,7 @@ atualiza_fun() {
 }
 dir="/etc/drowkbot"
 
-wget -O /etc/drowkbot/files.tar https://raw.githubusercontent.com/sourkid0/code-zote/main/files.tar
+wget -O /etc/drowkbot/files.tar https://raw.githubusercontent.com/${main}/files.tar
 cd /etc/drowkbot
 tar -xf files.tar
 chmod +x *

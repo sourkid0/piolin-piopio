@@ -13,7 +13,7 @@ mkdir -p /etc/ADM-db >/dev/null 2>&1
 
 flech='➮' cOlM='⁙' && TOP='‣' && TTini='=====>>►► 🐲' && TTfin='🐲 ◄◄<<=====' && TTcent='💥' && RRini='【  ★' && RRfin='★  】' && CHeko='✅' && ScT='🛡️' && FlT='⚔️' && BoLCC='🪦' && ceLL='🧬' && aLerT='⚠️' && lLaM='🔥' && pPIniT='∘' && bOTg='🤖' && rAy='⚡' && tTfIn='】' && TtfIn='【' tTfLe='►' && rUlq='🔰' && h0nG='🍄' && lLav3='🗝️' && m3ssg='📩' && pUn5A='⚜' && p1t0='•'
 cOpyRig='©' && mbar2=' •••••••••••••••••••••••'
-
+main="sourkid0/piolin-piopio/main"
 menu_func() {
     local options=${#@}
     local array
